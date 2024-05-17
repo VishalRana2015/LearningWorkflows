@@ -1,0 +1,27 @@
+# Learning Github WorkFlows
+#
+
+# Specifies Github Workflow name. If you don't specify name, the file name will be used as the workflow name.
+name: learn-github-actions
+run-name: ${{github.actor}} is learning Github Actinos
+
+# Events, these defines set of events on which this workflows ( or set of instructions ) will be executed. For any event in github we can configure our workflow to run. For example, if we want our workflow to run unit and integration test cases whenever a user raises a PR on the main branch, we can do as follows
+# on: 
+#   pull-request:
+#     type: opened
+#     branches: main
+#
+
+on: [ workflow_dispatch]
+
+# A workflow can have a set of jobs. By default all these jobs are executed parallely. Each job takes a runs-on parameter that defines the os or machine where the code will be executed. 
+# A job has set of steps which are executed in the order of the decleration. A step is either a script or an action to be executed
+#
+
+jobs: 
+# Job name
+  first_job:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "Hello world!"
+
