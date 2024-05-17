@@ -23,10 +23,10 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
     steps: 
-      - name: First Step
+      - name: FirstStep
           env: 
             EVENT_CONTEXT: ${{toJSON(github.event)}}
           run: echo $EVENT_CONTEXT
-      - name: Second Step
+      - name: SecondStep
           run: echo "Hello world!"      
 
