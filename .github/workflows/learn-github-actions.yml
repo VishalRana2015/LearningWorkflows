@@ -12,7 +12,18 @@ run-name: ${{github.actor}} is learning Github Actinos
 #     branches: main
 #
 
-on: [ workflow_dispatch]
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        type: choice
+        description: Choose Environment
+        options:
+          - dev
+          - qa
+          - prod
+        message: 
+          required: true
 
 # A workflow can have a set of jobs. By default all these jobs are executed parallely. Each job takes a runs-on parameter that defines the os or machine where the code will be executed. 
 # A job has set of steps which are executed in the order of the decleration. A step is either a script or an action to be executed
