@@ -24,9 +24,9 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: FirstStep
-          env: 
-            EVENT_CONTEXT: ${{toJSON(github.event)}}
-          run: echo $EVENT_CONTEXT
+        env: 
+          EVENT_CONTEXT: ${{toJSON(github.event)}}
+        run: echo $EVENT_CONTEXT
       - name: SecondStep
-          run: echo "Hello world!"      
+        run: echo "Hello world!"      
 
