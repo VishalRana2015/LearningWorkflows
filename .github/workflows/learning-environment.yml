@@ -18,3 +18,6 @@ jobs:
     steps:
       - name: Echo Environment details
         run: echo "Hello world- $greeting ${{ env.name}}"
+
+      - name: Print environment variables at the repository level
+        run: echo "env - ${{ vars.env }}, repo-var - ${{ vars.repo_var}} "
