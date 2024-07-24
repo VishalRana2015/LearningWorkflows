@@ -9,8 +9,12 @@ on: [workflow_dispatch]
 jobs:
   # This workflow contains a single job called "build"
   DEV:
+    runs-on: ubuntu-latest
     # This job correspond to DEV_ENV
     environment: DEV_ENV
+    env:
+      greeting: "Hello,"
+      name: "Vishal"
     steps:
       - name: Echo Environment details
-        run: echo "This job is DEV, and env variable value is: ${{ env.env }}"
+        run: echo "Hello world"
