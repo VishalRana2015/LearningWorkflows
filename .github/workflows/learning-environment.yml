@@ -11,7 +11,7 @@ jobs:
   DEV:
     runs-on: ubuntu-latest
     # This job correspond to DEV_ENV
-    environment: DEV_ENV
+    
     env:
       greeting: "Hello,"
       name: "Vishal"
