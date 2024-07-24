@@ -8,16 +8,9 @@ on: [workflow_dispatch]
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  step1:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+  DEV:
+    # This job correspond to DEV_ENV
+    environment: DEV_ENV
     steps:
-     
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: |
-              set +x
-              echo Hello, world!
-
+      - name: Echo Environment details
+        run: echo "This job is DEV, and env variable value is: ${{ env.env }}"
