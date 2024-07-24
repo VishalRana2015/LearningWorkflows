@@ -17,4 +17,4 @@ jobs:
       name: "Vishal"
     steps:
       - name: Echo Environment details
-        run: echo "Hello world"
+        run: echo "Hello world- $greeting ${{ env.name}}"
