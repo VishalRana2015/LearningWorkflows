@@ -22,8 +22,15 @@ on:
           - dev
           - qa
           - prod
-        message: 
-          required: true
+        required: true
+      alias:
+        type: choice
+        description: Choose Alias
+        options:
+          - Development
+          - Test
+          - Prod
+        required: true
 
 # A workflow can have a set of jobs. By default all these jobs are executed parallely. Each job takes a runs-on parameter that defines the os or machine where the code will be executed. 
 # A job has set of steps which are executed in the order of the decleration. A step is either a script or an action to be executed
