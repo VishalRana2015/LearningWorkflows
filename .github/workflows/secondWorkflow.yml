@@ -10,3 +10,7 @@ jobs:
     steps:
       - name: Second Workflow Job's Step 1
         run: echo "Second Workflow Job step1 executed"
+
+  calls_third_workflow_job:
+    name: Executing thirdWorkflow
+    uses: VishalRana2015/LearningWorkflows/.github/workflows/thirdWorkflow.yml@main
