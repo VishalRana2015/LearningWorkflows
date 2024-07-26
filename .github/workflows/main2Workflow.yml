@@ -1,0 +1,13 @@
+name: Main2 Workflow
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    name: First Job
+    steps:
+      - name: First Step
+        run: echo "First Step Executed"
