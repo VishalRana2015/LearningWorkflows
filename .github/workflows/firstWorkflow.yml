@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   workflow_call:
     inputs:
-      username:
+      user_name:
         type: string
         required: true
 
@@ -13,4 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: First Workflow Job Step
-        run: echo "First Workflow Step1 executing"
+        run: |
+          echo "First Workflow Step1 executing"
+          echo "User name is ${{ inputs.user_name}} "
