@@ -11,8 +11,10 @@ jobs:
 
   call_second_workflow:
     name: Executing secondWorkflow
+    needs: call_first_workflow
     uses: VishalRana2015/LearningWorkflows/.github/workflows/secondWorkflow.yml@main
 
   call_third_workflow:
     name: Executing thirdWorkflow
+    needs: call_second_workflow
     uses: VishalRana2015/LearningWorkflows/.github/workflows/thirdWorkflow.yml@main
