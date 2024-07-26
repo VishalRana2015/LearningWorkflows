@@ -1,0 +1,14 @@
+name: Third Workflow
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+
+jobs:
+  third_workflow_only_job:
+    name: Third Workflow Only Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Third Workflow Job Step1
+        run: echo "Third Workflow Job Step1 executed"
