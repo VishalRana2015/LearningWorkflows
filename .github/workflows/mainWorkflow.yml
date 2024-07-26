@@ -6,4 +6,13 @@ on:
 
 jobs:
   call_first_workflow:
+    name: Executing firstWorkflow
     uses: VishalRana2015/LearningWorkflows/.github/workflows/firstWorkflow.yml@main
+
+  call_second_workflow:
+    name: Executing secondWorkflow
+    uses: VishalRana2015/LearningWorkflows/.github/workflows/secondWorkflow.yml@main
+
+  call_third_workflow:
+    name: Executing thirdWorkflow
+    uses: VishalRana2015/LearningWorkflows/.github/workflows/thirdWorkflow.yml@main
