@@ -6,4 +6,4 @@ on:
 
 jobs:
   call_first_workflow:
-    uses: .github/workflows/firstWorkflow.yml@main
+    uses: ./.github/workflows/firstWorkflow.yml@main
