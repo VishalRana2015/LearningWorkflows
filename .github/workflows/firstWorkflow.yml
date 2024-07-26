@@ -3,6 +3,10 @@ name: firstWorkflow
 on: 
   workflow_dispatch:
   workflow_call:
+    inputs:
+      username:
+        type: string
+        required: true
 
 jobs:
   first_workflow_job:
