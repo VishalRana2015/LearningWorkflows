@@ -5,7 +5,7 @@ on:
   workflow_call:
 
 jobs:
-  second_workflow_only_job:
+  second_workflow_first_job:
     runs-on: ubuntu-latest
     steps:
       - name: Second Workflow Job's Step 1
@@ -13,4 +13,5 @@ jobs:
 
   calls_third_workflow_job:
     name: Executing thirdWorkflow
+    needs: second_workflow_first_job
     uses: VishalRana2015/LearningWorkflows/.github/workflows/thirdWorkflow.yml@main
