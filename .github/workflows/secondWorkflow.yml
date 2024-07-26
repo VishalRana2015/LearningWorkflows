@@ -1,0 +1,12 @@
+name: Second Workflow
+
+on: 
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  second_workflow_only_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Second Workflow Job's Step 1
+        run: echo "Second Workflow Job step1 executed"
