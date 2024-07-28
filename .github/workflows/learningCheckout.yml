@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           name:  VishalRana2015/SimpleServerEC2
-          token: ${{ secrets.simpleServerEc2Token }}
+          token: ${{ github.token }}
 
 
       - name: Print Current directory and its contents
@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           name: VishalRana2015/Mandelbrot
-          token: ${{ secrets.mandelbrot }}
+          token: ${{ github.token }}
 
       - name: Print Current Working directory and its contents
         run: | 
