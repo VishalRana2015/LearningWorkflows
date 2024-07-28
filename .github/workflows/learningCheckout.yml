@@ -16,7 +16,7 @@ jobs:
       - name: Clone SimpleServerEc2 Server Repo
         uses: actions/checkout@v4
         with:
-          name:  VishalRana2015/SimpleServerEC2
+          repository:  VishalRana2015/SimpleServerEC2
           token: ${{ github.token }}
 
 
@@ -28,7 +28,7 @@ jobs:
       - name: Clone Mandelbrot Repository
         uses: actions/checkout@v4
         with:
-          name: VishalRana2015/Mandelbrot
+          repository: VishalRana2015/Mandelbrot
           token: ${{ github.token }}
 
       - name: Print Current Working directory and its contents
