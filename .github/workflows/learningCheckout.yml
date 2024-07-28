@@ -1,0 +1,38 @@
+name: Learning actions/checkout 
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  clone_two_repo:
+    runs-on: ubuntu-latest
+    name: Clone Two Repositories
+    steps:
+      - name: Print Working Directory
+        run: pwd
+        
+      - name: Clone SimpleServerEc2 Server Repo
+        uses: actions/checkout@v4
+        with:
+          name:  VishalRana2015/SimpleServerEC2
+          token: ${{ secrets.simpleServerEc2Token }}
+
+
+      - name: Print Current directory and its contents
+        run: | 
+          pwd
+          ls -als
+
+      - name: Clone Mandelbrot Repository
+        uses: actions/checkout@v4
+        with:
+          name: VishalRana2015/Mandelbrot
+          token: ${{ secrets.mandelbrot }}
+
+      - name: Print Current Working directory and its contents
+        run: | 
+          pwd 
+          ls -als
+          
+        
