@@ -6,6 +6,7 @@ on:
 
 jobs:
   clone_two_repo:
+    environment: REPO_CLONE_TEST
     runs-on: ubuntu-latest
     name: Clone Two Repositories
     steps:
