@@ -1,3 +1,8 @@
+name: Leaning ouputs
+
+on:
+  workflow_call:
+
 jobs:
   job1:
     runs-on: ubuntu-latest
