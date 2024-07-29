@@ -2,6 +2,7 @@ name: Leaning ouputs
 
 on:
   workflow_call:
+  workflow_dispatch:
 
 jobs:
   job1:
