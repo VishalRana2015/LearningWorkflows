@@ -15,5 +15,12 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: build-artifacts
+          name: build-artifact
           path: build/
+
+      - name: Create Release and Upload Artifacts
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: build-artifact
+          name: artifact_name
+          tag: artifact_tag
