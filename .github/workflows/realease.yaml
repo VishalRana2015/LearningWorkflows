@@ -24,3 +24,4 @@ jobs:
           artifacts: build-artifact
           name: artifact_name
           tag: artifact_tag
+          token: ${{ secrets.GITHUB_TOKEN }}
