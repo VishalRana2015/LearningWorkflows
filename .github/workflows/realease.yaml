@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Build
         run: | 
-          mkdir -d build
+          mkdir build
           echo "Build Output" > build/ouptut.txt 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
